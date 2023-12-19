@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/style.css">
+        <title>World soccer site</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>해외 축구 사이트</h1>
+        </div>
+        <br>
+        <div class="contents">
+            <img src="images/England.jpg" alt="프리미어리그">
+            <img src="images/Spain.jpg" alt="라리가">
+            <img src="images/Italy.jpg" alt="세리에A">
+            <img src="images/Germany.jpg" alt="분데스리가">
+            <img src="images/France.jpg" alt="리그앙">
+        </div>
+        <br>
+        <div class ="abc">
+           <button class="redirect-button" data-url="https://www.premierleague.com/">프리미어리그</button>
+           <button class="redirect-button" data-url="https://www.laliga.com/en-KR">라리가</button>
+           <button class="redirect-button" data-url="https://www.legaseriea.it/en">세리에A</button>
+           <button class="redirect-button" data-url="https://www.bundesliga.com/de/bundesliga">분데스리가</button>
+           <button class="redirect-button" data-url="https://www.ligue1.com/">리그앙</button>
+           <button class="redirect-button" data-url="https://sports.news.naver.com/wfootball/record/index?category=epl&year=2023&tab=team">리그 순위</button>
+           <button class="redirect-button" data-url="https://sports.news.naver.com/wfootball/record/index?category=primera&tab=team&year=2023">리그 순위</button>
+           <button class="redirect-button" data-url="https://sports.news.naver.com/wfootball/record/index?category=seria&tab=team&year=2023">리그 순위</button>
+           <button class="redirect-button" data-url="https://sports.news.naver.com/wfootball/record/index?category=bundesliga&tab=team&year=2023">리그 순위</button>
+           <button class="redirect-button" data-url="https://sports.news.naver.com/wfootball/record/index?category=ligue1&tab=team&year=2023">리그 순위</button>
+           <button class="redirect-button" data-url="https://sports.news.naver.com/wfootball/record/index?category=epl&league=100&tab=player">득점/도움 순위</button>
+           <button class="redirect-button" data-url="https://sports.news.naver.com/wfootball/record/index?category=primera&tab=player">득점/도움 순위</button>
+           <button class="redirect-button" data-url="https://sports.news.naver.com/wfootball/record/index?category=seria&tab=player">득점/도움 순위</button>
+           <button class="redirect-button" data-url="https://sports.news.naver.com/wfootball/record/index?category=bundesliga&tab=player">득점/도움 순위</button>
+           <button class="redirect-button" data-url="https://sports.news.naver.com/wfootball/record/index?category=ligue1&tab=player">득점/도움 순위</button>
+           <button class="redirect-button" data-url="https://m.sports.naver.com/wfootball/schedule/index?category=epl&date=2023-12-22">경기 일정</button>
+           <button class="redirect-button" data-url="https://m.sports.naver.com/wfootball/schedule/index?category=primera&date=2023-12-20">경기 일정</button>
+           <button class="redirect-button" data-url="https://m.sports.naver.com/wfootball/schedule/index?category=seria&date=2023-12-23">경기 일정</button>
+           <button class="redirect-button" data-url="https://m.sports.naver.com/wfootball/schedule/index?category=bundesliga&date=2023-12-20">경기 일정</button>
+           <button class="redirect-button" data-url="https://m.sports.naver.com/wfootball/schedule/index?category=ligue1&date=2023-12-21">경기 일정</button>
+
+           <script>
+            var buttons = document.getElementsByClassName('redirect-button');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].addEventListener('click', function() {
+                    var siteURL = this.getAttribute('data-url');
+                    redirectToSite(siteURL);
+                });
+            }
+        
+            function redirectToSite(siteURL) {
+                window.location.href = siteURL;
+            }
+        </script>
+        </div>
+        <br>
+        <div class="footer">
+            <h2>Soccer News -> </h2>
+            <a href="https://www.instagram.com/fabriziorom/">로마노 기자</a>
+        </div>
+        <br>
+        <div>
+            <input type="text" id="searchInput" placeholder="동영상 검색">
+            <button class="search-button" onclick="searchYouTube()">검색</button>
+        </div>
+        <div id="searchResults"></div>
+
+        <script src="scripts/main.js"></script>
+    </body>
+</html>
